@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mã hóa & Giải mã - Phiên bản đơn giản</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Verdana', sans-serif;
+    background: #fdf6f0;
+    color: #4a4a4a;
+  }
+  header {
+    background-color: #a3d2ca;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    color: #0b3c49;
+    font-size: 1.8rem;
+  }
+  nav {
+    margin-top: 8px;
+  }
+  nav a {
+    color: #05668d;
+    margin: 0 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 480px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  main p.intro {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #2f4858;
+    text-align: center;
+  }
+  ul.cipher-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.cipher-list li {
+    background: #e7f6f2;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+  ul.cipher-list li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #05668d;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease;
+  }
+  ul.cipher-list li a i {
+    margin-right: 14px;
+    font-size: 1.5rem;
+    min-width: 28px;
+    text-align: center;
+  }
+  ul.cipher-list li a:hover {
+    background: #05668d;
+    color: #fdf6f0;
+  }
+  footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    border-top: 1px solid #d3d3d3;
+    background: #fafafa;
+  }
+  footer a {
+    color: #05668d;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media(max-width: 520px) {
+    main {
+      margin: 20px 15px;
+    }
+    ul.cipher-list li a {
+      font-size: 1rem;
+      padding: 12px 15px;
+    }
+    ul.cipher-list li a i {
+      font-size: 1.3rem;
+      margin-right: 10px;
+      min-width: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>BMTTNC</h1>
+ 
+</header>
+
+<main>
+  
+  <ul class="cipher-list">
+    <li><a href="/caesar"><i class="fas fa-key"></i>Caesar Cipher</a></li>
+    <li><a href="/railfence"><i class="fas fa-bars"></i>Rail Fence Cipher</a></li>
+    <li><a href="/vigenere"><i class="fas fa-user-shield"></i>Vigenere Cipher</a></li>
+    <li><a href="/playfair"><i class="fas fa-chess"></i>Playfair Cipher</a></li>
+    <li><a href="/transposition"><i class="fas fa-random"></i>Transposition Cipher</a></li>
+  </ul>
+</main>
+
+
+</body>
+</html>

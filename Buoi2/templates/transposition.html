@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transposition Cipher</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    form h3 {
+      margin-bottom: 25px;
+    }
+    form h3.encrypt {
+      color: #007bff;
+    }
+    form h3.decrypt {
+      color: #28a745;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    input.form-control {
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 5px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      transition: opacity 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      opacity: 0.8;
+    }
+    button.btn-encrypt {
+      background-color: #007bff;
+    }
+    button.btn-decrypt {
+      background-color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <h2 class="mb-4 text-center">Transposition Cipher</h2>
+
+    <!-- Mã hóa Form -->
+    <form action="" method="post">
+      <h3 class="encrypt">Mã hóa</h3>
+      <div class="form-group">
+        <label for="plain_text">Văn bản gốc:</label>
+        <input type="text" class="form-control" id="plain_text" name="plain_text" placeholder="Nhập văn bản cần mã hóa" required />
+      </div>
+      <div class="form-group">
+        <label for="key_encrypt">Số cột:</label>
+        <input type="number" class="form-control" id="key_encrypt" name="key_encrypt" placeholder="Nhập số cột" required />
+      </div>
+      <button type="submit" name="encrypt" class="btn-encrypt">Mã hóa</button>
+    </form>
+
+    <!-- Giải mã Form -->
+    <form action="" method="post" class="mt-5">
+      <h3 class="decrypt">Giải mã</h3>
+      <div class="form-group">
+        <label for="cipher_text">Văn bản mã hóa:</label>
+        <input type="text" class="form-control" id="cipher_text" name="cipher_text" placeholder="Nhập văn bản mã hóa" required />
+      </div>
+      <div class="form-group">
+        <label for="key_decrypt">Số cột:</label>
+        <input type="number" class="form-control" id="key_decrypt" name="key_decrypt" placeholder="Nhập số cột" required />
+      </div>
+      <button type="submit" name="decrypt" class="btn-decrypt">Giải mã</button>
+    </form>
+  </div>
+</body>
+</html>

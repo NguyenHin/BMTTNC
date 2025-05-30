@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Playfair Cipher - Đơn giản</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px;
+  }
+  .container {
+    max-width: 480px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a73e8;
+    font-weight: 700;
+  }
+  form {
+    margin-bottom: 35px;
+  }
+  form h3 {
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+  form h3.encrypt {
+    color: #1a73e8;
+  }
+  form h3.decrypt {
+    color: #27ae60;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 2px solid #d1d9e6;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease;
+    resize: vertical;
+  }
+  textarea {
+    min-height: 100px;
+    max-height: 140px;
+  }
+  textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+    background-color: #f0f7ff;
+  }
+  button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+  }
+  button.encrypt {
+    background-color: #1a73e8;
+  }
+  button.encrypt:hover {
+    background-color: #1666c1;
+  }
+  button.decrypt {
+    background-color: #27ae60;
+  }
+  button.decrypt:hover {
+    background-color: #219150;
+  }
+  #resultText {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 2px solid #d1d9e6;
+    background: #f0f7ff;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 140px;
+    color: #2c3e50;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Playfair Cipher</h2>
+
+  <form id="encryptForm" novalidate>
+    <h3 class="encrypt">Mã hóa</h3>
+    <label for="plain_text_encrypt">Văn bản gốc:</label>
+    <textarea id="plain_text_encrypt" name="plain_text_encrypt" placeholder="Nhập văn bản cần mã hóa" required></textarea>
+
+    <label for="key_encrypt" style="margin-top: 12px;">Khóa:</label>
+    <input type="text" id="key_encrypt" name="key_encrypt" placeholder="Nhập khóa" required>
+
+    <button type="submit" name="encrypt" class="encrypt">Mã hóa</button>
+  </form>
+
+  <form id="decryptForm" novalidate>
+    <h3 class="decrypt">Giải mã</h3>
+    <label for="cipher_text_decrypt">Văn bản mã hóa:</label>
+    <textarea id="cipher_text_decrypt" name="cipher_text_decrypt" placeholder="Nhập văn bản mã hóa" required></textarea>
+
+    <label for="key_decrypt" style="margin-top: 12px;">Khóa:</label>
+    <input type="text" id="key_decrypt" name="key_decrypt" placeholder="Nhập khóa" required>
+
+    <button type="submit" name="decrypt" class="decrypt">Giải mã</button>
+  </form>
+
+  <label for="resultText">Kết quả:</label>
+  <textarea id="resultText" readonly placeholder="Kết quả sẽ hiển thị tại đây..."></textarea>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cipher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007bff;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .btn-encrypt {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-decrypt {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container form-container">
+        <h2 class="mb-4 text-center">Vigenere Cipher</h2>
+
+        <!-- Mã hóa Form -->
+        <form action="" method="post">
+            <h3 class="text-primary">Mã hóa</h3>
+            <div class="form-group">
+                <label for="plain_text">Văn bản gốc:</label>
+                <input type="text" class="form-control" id="plain_text" name="plain_text" placeholder="Nhập văn bản cần mã hóa" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Khóa:</label>
+                <input type="text" class="form-control" id="key" name="key" placeholder="Nhập khóa" required>
+            </div>
+            <button type="submit" name="encrypt" class="btn btn-encrypt">Mã hóa</button>
+        </form>
+
+        <!-- Giải mã Form -->
+        <form action="" method="post" class="mt-5">
+            <h3 class="text-success">Giải mã</h3>
+            <div class="form-group">
+                <label for="cipher_text">Văn bản mã hóa:</label>
+                <input type="text" class="form-control" id="cipher_text" name="cipher_text" placeholder="Nhập văn bản mã hóa" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Khóa:</label>
+                <input type="text" class="form-control" id="key" name="key" placeholder="Nhập khóa" required>
+            </div>
+            <button type="submit" name="decrypt" class="btn btn-decrypt">Giải mã</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
